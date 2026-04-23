@@ -11,13 +11,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Slf4j
-@Component
-@StepScope
 public class DatePrintTasklet implements Tasklet {
 
     private final String requestDate;
 
-    public DatePrintTasklet(@Value("#{jobParameters['requestDate']}") String requestDate) {
+    public DatePrintTasklet(String requestDate) {
         this.requestDate = requestDate;
     }
 
